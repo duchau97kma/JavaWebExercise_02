@@ -16,12 +16,7 @@ public class Bai5 {
         Scanner sr = new Scanner(System.in);
         System.out.println("Nhap a >");
         float a = sr.nextFloat();
-        if(a%2==0)
-        {
-            System.out.println(a+" "+" là số chẵn");
-        }else{
-            System.out.println(a+" "+"là số lẻ");
-        }
+        System.out.println(a%2==0?"a là số chẵn":"a là số lẻ");
         
     }
 }
