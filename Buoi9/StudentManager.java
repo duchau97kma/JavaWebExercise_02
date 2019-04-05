@@ -11,8 +11,9 @@ package Buoi9;
  */
 public class StudentManager {
     private Student[] listStudents;
-    private final int MAX=10;
+    private static final int MAX=10;
     private int count;
+   
     public StudentManager() {
         this.listStudents = new Student[MAX];
         this.count=0;   
@@ -20,29 +21,24 @@ public class StudentManager {
     public void add(){
         Input input = new Input();
         System.out.println("Input ID:");
-        input.inputID();
+        String id = input.inputID();
         System.out.println("Input Name:");
-        input.inputName();
+        String name = input.inputName();
         System.out.println("Input Mark:");
-        input.inputMark();
+        double mark = input.inputMark();
         System.out.println("Input Phone:");
-        input.inputPhone();
-  
-        Student student;
-        student = new Student();
-        this.listStudents[count]= student;
+        String phone =input.inputPhone();
+        
+        Student st = new Student(id, name, mark, phone);
+        this.listStudents[this.count]= st;
         this.count++;
         
     }
     public void list(){
         System.out.println("----List Student----");
-        int sum=0;
-        for (int i = 0; i < count; i++) {
-            System.out.println(i);
-           sum=sum+i;
-            System.out.println(sum);
-        //System.out.println(this.listStudents[i]);
-            
+        for (int i = 0; i < this.count; i++) {
+        System.out.println(this.listStudents[i]);
+  
         }
     }
     public void showTop(int num){
@@ -54,8 +50,8 @@ public class StudentManager {
     }
     private Student[] orderList(){
         Student[] arr = this.listStudents;
-        for (int i = 0; i < count; i++) {
-            for (int j = i+1; j < count; j++) {
+        for (int i = 0; i < this.count; i++) {
+            for (int j = i+1; j < this.count; j++) {
                 if (arr[i].getMark()< arr[j].getMark()) {
                     Student temp= arr[i];
                     arr[i]=arr[j];

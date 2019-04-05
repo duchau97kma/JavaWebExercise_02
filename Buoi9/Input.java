@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Input {
 
-    Student st = new Student();
+   // Student st = new Student();
     Scanner sr = new Scanner(System.in);
 
     public String inputID() {

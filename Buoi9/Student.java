@@ -16,13 +16,19 @@ public class Student {
     private String id;
     private String name;
     private double mark;
-     private int group;
+    private int group;
     private String phone;
    
-    
-   
-
     public Student() {
+    }
+    
+
+    public Student(String id, String name, double mark, String phone) {
+        this.id = id;
+        this.name = name;
+        this.mark = mark;
+        this.phone = phone;
+        this.callGroup();
     }
 
     public Student(String id, String name, double mark, int group, String phone) {
@@ -31,14 +37,6 @@ public class Student {
         this.mark = mark;
         this.group = group;
         this.phone = phone;
-    }
-
-    public Student(String id, String name, double mark, String phone) {
-        this.id = id;
-        this.name = name;
-        this.mark = mark;
-        this.phone = phone;
-        this.callGroup();
     }
 
     
@@ -96,7 +94,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", mark=" + mark + ", phone=" + phone + ", group=" + group + '}';
+        return "Student{" + "id=" + id + ", name=" + name + ", mark=" + mark + ", phone=" + phone + ", group="+group;
     }
     
    
