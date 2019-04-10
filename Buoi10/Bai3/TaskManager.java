@@ -32,9 +32,9 @@ public class TaskManager {
         listTasks[this.count]=task;
         count++; 
         String taskPath = "E:\\BT\\Buoi10\\task.txt";
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(taskPath, true));
-        oos.writeObject(task);
-        oos.flush();
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(taskPath));
+        oos.writeObject(this.listTasks);
+        //oos.flush();
         oos.close();
         System.out.println("Save success!");
     }
@@ -58,16 +58,15 @@ public class TaskManager {
   
     }
 
-    public void load(String path){
-        try {
+    public void load(String path) throws FileNotFoundException, IOException, ClassNotFoundException{
+      
        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
-       Task data = (Task) ois.readObject();
-            System.out.println("Load data Successful");
-       ois.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+     Task[]  tasks = (Task[]) ois.readObject();
+        for (Task task : tasks) {
+            System.out.println(task);
         }
-        
+       ois.close();
+    
     }
     
     public void updateStatus(int id, boolean done){
