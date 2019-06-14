@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width: 960px;
+                margin: 0 auto;
+            }
+            h2{
+                text-align: center;
+                color: #088A08;
+            }
+            .form{
+                width: 80%;
+                margin: 0 auto;
+            }
+            table{
+                width: 100%;
+                height: auto;
+                background-color: #CEF6D8;
+            }
+            table th,td{
+                border: 0.5px solid #088A4B;
+            }
+            #submit{
+                text-align: center;
+            }
+            .left{
+                width: 33%;
+            }
+            #show{
+                text-align: center;
+                color: #FE2E64;
+            }
+        </style>
+        <script>
+            function Show(){
+                document.getElementById("show").innerHTML ="<label> Bạn đã đăng ký thành công!!! </label>";
+            }
+         </script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+            <div class="form">
+                <form>
+                    <table border="1">
+                        <tr>
+                            <td class="left">Họ và tên</td>
+                            <td> <input type="text" size="65"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Địa chỉ</td>
+                            <td> <input type="text" size="55"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Điện thoại</td>
+                            <td> <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Phái</td>
+                            <td> <input type="radio" name="gender" value="Nam" checked>Nam
+                                <input type="radio" name="gender" value="Nữ" >Nữ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Nghề nghiệp</td>
+                            <td>
+                                <select>
+                                    <option value="Giáo viên">Giáo viên</option>
+                                    <option value="Bác sĩ">Bác sĩ</option>
+                                    <option value="Kỹ sư">Kỹ sư</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Chọn sản phẩm tham gia</td>
+                            <td>
+                                <select multiple>
+                                    <option value="Kem đánh răng">Kem đánh răng</option>
+                                    <option value="Bột giặt">Bột giặt</option>
+                                    <option value="Dầu gội đầu">Dầu gội đầu</option>
+                                    <option value="Sữa tắm">Sữa tắm</option> 
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Số người dự đoán tham gia</td>
+                            <td><input type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="submit"><button type="button" onclick="Show()">Đồng ý</button> </td>
+                        </tr>
+                        <tr >
+                            <td colspan="2" id="show"> </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

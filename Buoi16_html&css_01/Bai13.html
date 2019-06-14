@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width: 960px;
+                height: auto;
+                margin: 0 auto;
+            }
+            h2{
+                text-align: center;
+                color:#5858FA;
+            }
+            .form{
+                width: 80%;
+                margin: 0 auto;
+            }
+            table{
+                width: 100%;
+                height: auto;
+                background-color: #F2F5A9;
+                color: #5858FA;
+            }
+            table th,td{
+                border: 1px solid #5858FA;
+            }
+            #submit{
+                text-align: center;
+            }
+            .left{
+                width: 33%;
+            }
+            #show{
+                text-align: center;
+                color: #FE2E64;
+            }
+            .cot{
+                height: 80px;
+                text-align: center;
+            }
+            .vien{
+                height: 70%;
+                border: 1px solid red;
+                margin-left: 150px;
+                margin-right: 150px;
+                padding: 15px;
+            }
+            #nhan{
+                position: relative;
+            }
+        </style>
+        <script>
+             
+            function Show(){
+                document.getElementById("show").innerHTML ="<label> Bạn đã đăng ký thành công!!! </label>";
+            }
+ 
+            </script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Đăng ký du lịch</h2>
+            <div class="form">
+                <form>
+                    <table border="1">
+                        <tr>
+                            <td class="left">Họ và tên</td>
+                            <td> <input type="text" size="65"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Địa chỉ</td>
+                            <td> <input type="text" size="55"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Điện thoại</td>
+                            <td> <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Khách Việt Nam</td>
+                            <td> <input type="checkbox" checked>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Chọn Tour</td>
+                            <td>
+                                <select>
+                                    <optgroup label="Miền Bắc">
+                                        <option value="Hà Nội - Hạ Long - SaPa">Hà Nội - Hạ Long - SaPa</option>
+                                        <option value="Hà Nội - Chùa Hương - Ninh Bình">Hà Nội - Chùa Hương - Ninh Bình</option>
+                                        <option value="Hà Nội - Cát Bà - Tuần Châu">Hà Nội - Cát Bà - Tuần Châu</option>
+                                    </optgroup>
+                                    <optgroup label="Miền Trung">
+                                        <option value="Huế - Bạch Mã - Đà Nẵng">Huế - Bạch Mã - Đà Nẵng</option>
+                                        <option value="Nha Trang - Đà Lạt" >Nha Trang - Đà Lạt</option>
+                                        <option value="Buôn Mê Thuật - Gia Lai - Kon Tum">Buôn Mê Thuật - Gia Lai - Kon Tum </option>
+                                    </optgroup>
+                                    <optgroup label="Miền Nam">
+                                        <option value="TP.HCM - Cần Thơ - Cà Mau">P.HCM - Cần Thơ - Cà Mau</option>
+                                        <option value="TP.HCM - Mỹ Tho">TP.HCM - Mỹ Tho</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Chọn sản phẩm tham gia</td>
+                            <td>
+                                <select multiple>
+                                    <option value="Kem đánh răng">Kem đánh răng</option>
+                                    <option value="Bột giặt">Bột giặt</option>
+                                    <option value="Dầu gội đầu">Dầu gội đầu</option>
+                                    <option value="Sữa tắm">Sữa tắm</option> 
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">Phương tiện</td>
+                            <td><input type="radio" name="vehicle" value="Máy bay" checked>Máy bay
+                                <input type="radio" name="vehicle" value="Ô tô"> Ô tô</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="cot">
+                                <div id="nhan"> <label>Số lượng đoàn khách</label></div>  
+                                <div class="vien">
+                                    <label>Người lớn</label> <input type="text" size="10">
+                                    <label>Trẻ em</label> <input type="text" size="10">
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ghi chú thêm</td>
+                            <td><select multiple>
+                                    <option value="Có 2 trẻ em dưới 6 tuổi">Có 2 trẻ em dưới 6 tuổi</option>
+                                    <option value="Có 2 người ăn chay">Có 2 người ăn chay</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="submit"><button type="button" onclick="Show()">Đồng ý</button> </td>
+                        </tr>
+
+                        <tr >
+                            <td colspan="2" id="show"> </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

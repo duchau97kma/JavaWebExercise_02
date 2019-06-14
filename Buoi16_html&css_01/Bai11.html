@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h2{
+                color: #8A0829;
+            }
+            table{
+                background-color: #A9E2F3;
+                 border: 1px solid #8A0829;
+            }
+            table th,td{
+                border: 1.5px solid #8A0829;
+            }
+            .sytle{
+                text-align: center;
+            }
+            #show{
+                border: none;
+                text-align: center;
+                color: blue;
+            }
+        </style>
+        <script>
+            function show() {
+            var kq = document.getElementById("maND").value;
+            if(kq == " "){
+              document.getElementById("show").innerHTML="Vui lòng nhập mã người dùng";
+            }else{
+                document.getElementById("show").innerHTML=kq;
+            }
+}
+        </script>
+    </head>
+    <body>
+        <h2> Đăng nhập </h2>
+        <form>
+            <table border="1">
+                <tr>
+                    <td>Mã người dùng</td>
+                    <td> <input type="text" id="maND" > </td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="sytle" ><button type="button" onclick="show()"> Đồng ý </button></td>
+                </tr>
+                <tr >
+                    <td colspan="2" id="show"> </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
