@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function check() {
+                var num1 = document.getElementById('so1').value;
+                var num2 = document.getElementById('so2').value;
+                var check1 = document.getElementById('check1');
+                var check2 = document.getElementById('check2');
+                if (num1 == "") {
+                    check1.innerText = "This field is required";
+                } else{
+                    check1.innerText = "";
+                    if(isNaN(so1)) {
+                        check1.innerText = "This isn't number";
+                    }else{
+                        check1.innerText = "";
+                    }
+                }
+                if (num2 == "") {
+                    check2.innerText = "This field is required";
+                } else {
+                    check2.innerText = "";
+                    if (isNaN(so2)) {
+                        check2.innerText = "This isn't number";
+                    }else{
+                        check2.innerText = "";
+                    }
+                }
+            }
+            function add() {
+                var so1 = parseFloat(document.getElementById('so1').value);
+                var so2 = parseFloat(document.getElementById('so2').value);
+                var ketqua = parseFloat(so1 + so2);
+                check();
+                document.getElementById('kq').value = ketqua;
+
+
+
+
+            }
+            function sub() {
+                var so1 = parseFloat(document.getElementById('so1').value);
+                var so2 = parseFloat(document.getElementById('so2').value);
+                var ketqua = parseFloat(so1 - so2);
+                check();
+                document.getElementById('kq').value = ketqua;
+            }
+            function mul() {
+                var so1 = parseFloat(document.getElementById('so1').value);
+                var so2 = parseFloat(document.getElementById('so2').value);
+                var ketqua = parseFloat(so1 * so2);
+                check();
+                document.getElementById('kq').value = ketqua;
+            }
+            function div() {
+                var so1 = parseFloat(document.getElementById('so1').value);
+                var so2 = parseFloat(document.getElementById('so2').value);
+                var ketqua = parseFloat(so1 / so2);
+                check();
+                document.getElementById('kq').value = ketqua;
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Java Scrip căn bản</h1>
+        <h3>Máy tính đơn giản</h3>
+        <label>So thu 1:</label> <input type="text" id="so1"> <button onclick="add()">+</button>  <button onclick="sub()">-</button> <span id="check1"> </span> <br>
+        <label>So thu 2:</label> <input type="text" id="so2"> <button onclick="mul()">*</button>  <button onclick="div()">/</button> <span id="check2"> </span><br>
+        <label>Ket qua:</label> <input type="text" id="kq" readonly>
+
+    </body>
+</html>
